@@ -1,12 +1,23 @@
 monitoring:
+  url: ${ENV_URL}
+  port: 8080
+  timeout: 2000
+
+  scheduler:
+    availability: ${SCHEDULER_AVAILABILITY}
+
   email:
     smtp:
-      host: "smtp.gmail.com"
-      port: 8080
-      username: "enableUTestAddress@gmail.com"
-      appPassword: "mzmicstejlhblzkt"
+      host: ${SMTP_HOST}
+      port: ${SMTP_PORT}
+      username: ${SMTP_USERNAME}
+      appPassword: ${SMTP_PASSWORD}
     ssl:
       port: 465
+    message:
+      subject: "Availability result"
+      template: "Host: %s\nAvailability: %s\nDate: %s\nPort: %s"
+      destination: ${MESSAGE_DESTINATION}
 
 server:
   servlet:
