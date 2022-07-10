@@ -1,0 +1,17 @@
+monitoring:
+  email:
+    smtp:
+      host: "smtp.gmail.com"
+      port: 8080
+      username: "enableUTestAddress@gmail.com"
+      appPassword: "mzmicstejlhblzkt"
+    ssl:
+      port: 465
+
+server:
+  servlet:
+    context-path: "/api"
+
+logging:
+  file:
+    path: ./src/main/resources/log
